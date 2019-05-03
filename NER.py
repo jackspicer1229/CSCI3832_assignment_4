@@ -9,9 +9,9 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 
 ps = PorterStemmer()
 
-
-
-
+### Jack Spicer
+### Sousheel Vunnam
+### Nikhil Rajaram
 
 #Fill this function with features to train seqlearn on.
 #This is where the bulk of the work is to optimize the implementation
@@ -40,11 +40,8 @@ def features(sequence, i):
 
 	yield str(len(word))
 
-	# yield ps.stem(word)
-
-	# #Contains hyphen
-	# if re.search('^-{1}$', word):
-	# 	yield "Hyphen"
+	if re.search('[.!?\\-]', word):
+		yield re.findall('[.!?\\-]', word)[0]
 
 
 
@@ -61,16 +58,14 @@ def main():
 
 
 	#Evaluate our model
-	test_samples, test_labels, test_sentence_lengths = load_conll("data/test-run-test-with-keys.txt", features, split=True)
+	test_samples, test_labels, test_sentence_lengths = load_conll("data/F18-assgn4-test.txt", features, split=True)
 	prediction = clf.predict(test_samples, test_sentence_lengths)
-	# print(bio_f_score(test_labels, prediction))
-	print(prediction)
 
 	#Output results
 	i = 0
 	j = 1
 	output = []
-	for line in open("data/test-run-test-with-keys.txt"):
+	for line in open("data/F18-assgn4-test.txt"):
 		if(line == "\n"):
 			output.append("\n")
 			j = 1
@@ -87,6 +82,22 @@ def main():
 			f.write(item)
 
 
+	#Add dummy tag to the end of data
+	# file_edit = []
+	# with open('data/F18-assgn4-test.txt') as fp:
+	# 	line = fp.readline()
+	# 	while line:
+	# 		if line == "\n":
+	# 			file_edit.append("\n")
+	# 			line = fp.readline()
+	# 			continue
+	# 		else:
+	# 			file_edit.append(line[:len(line)-1] + "\t" + "O" + "\n")
+	# 			line = fp.readline()
+
+	# with open('data/F18-assgn4-test-1.txt', 'w') as f:
+	# 	for item in file_edit:
+	# 		f.write(item)
 
 
 
