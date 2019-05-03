@@ -18,3 +18,14 @@ Then, install seqlearn, which is an extension for scikit-learn. The installation
 ```
 python setup.py install
 ```
+
+# Running & Testing:
+Run NER.py
+```
+python NER.py
+```
+
+Test accuracy with evalNER.py
+```
+python evalNER.py goldstandardfile.txt predictions.txt
+```
