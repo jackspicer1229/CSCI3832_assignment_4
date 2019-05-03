@@ -1,5 +1,5 @@
 import re
-from seqlearn.datasets import load_conll 
+from seqlearn.datasets import load_conll
 from seqlearn.hmm import MultinomialHMM
 from seqlearn.perceptron import StructuredPerceptron
 from seqlearn.evaluation import bio_f_score
@@ -25,6 +25,16 @@ def features(sequence, i):
 	#Check if word contains a capital letter, but not the first letter
 	if re.search('\b[a-z]+[A-Z]+[a-z]*', word):
 		yield "Capital"
+	if i > 0:
+		yield "word-1:{}" + sequence[i - 1][1].lower()
+		if i > 1:
+			yield "word-2:{}" + sequence[i - 2][1].lower()
+	if i + 1 < len(sequence):
+		yield "word+1:{}" + sequence[i + 1][1].lower()
+		if i + 2 < len(sequence):
+			yield "word+2:{}" + sequence[i + 2][1].lower()
+
+	yield str(len(word))
 
 	if re.search('[.!?\\-]', word):
 		yield re.findall('[.!?\\-]', word)[0]
@@ -37,7 +47,7 @@ def main():
 	#Load in training data and pass it through our feature function.
 	#See documentation exact outputs of load_conll
 	samples, labels, sentence_lengths = load_conll("data/gene-trainF18.txt", features, split=True)
-	
+
 
 	#Train the model with our features
 	clf = StructuredPerceptron()
