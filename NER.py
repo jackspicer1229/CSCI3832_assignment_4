@@ -34,6 +34,11 @@ def features(sequence, i):
 		if i + 2 < len(sequence):
 			yield "word+2:{}" + sequence[i + 2][1].lower()
 
+	if re.search('\b[^a-zA-Z0-9]*', word):
+		yield 'notalpha'
+
+	yield '{}-cap'.format(len(re.findall('\b[A-Z]', word)))
+
 	yield str(len(word))
 
 	# if re.search('[.!?\\-]', word):
