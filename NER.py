@@ -5,9 +5,9 @@ from seqlearn.perceptron import StructuredPerceptron
 from seqlearn.evaluation import bio_f_score
 
 
-
-
-
+### Jack Spicer
+### Sousheel Vunnam
+### Nikhil Rajaram
 
 #Fill this function with features to train seqlearn on.
 #This is where the bulk of the work is to optimize the implementation
@@ -34,15 +34,10 @@ def features(sequence, i):
 		if i + 2 < len(sequence):
 			yield "word+2:{}" + sequence[i + 2][1].lower()
 
-	if re.search('\b[^a-zA-Z0-9]*', word):
-		yield 'notalpha'
-
-	yield '{}-cap'.format(len(re.findall('\b[A-Z]', word)))
-
 	yield str(len(word))
 
-	# if re.search('[.!?\\-]', word):
-	# 	yield re.findall('[.!?\\-]', word)[0]
+	if re.search('[.!?\\-]', word):
+		yield re.findall('[.!?\\-]', word)[0]
 
 
 
@@ -60,14 +55,14 @@ def main():
 
 
 	#Evaluate our model
-	test_samples, test_labels, test_sentence_lengths = load_conll("data/test-run-test-with-keys.txt", features, split=True)
+	test_samples, test_labels, test_sentence_lengths = load_conll("data/F18-assgn4-test.txt", features, split=True)
 	prediction = clf.predict(test_samples, test_sentence_lengths)
 
 	#Output results
 	i = 0
 	j = 1
 	output = []
-	for line in open("data/test-run-test-with-keys.txt"):
+	for line in open("data/F18-assgn4-test.txt"):
 		if(line == "\n"):
 			output.append("\n")
 			j = 1
