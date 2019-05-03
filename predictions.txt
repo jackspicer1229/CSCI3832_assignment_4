@@ -335,7 +335,7 @@
 3	The	O
 4	methodology	O
 5	of	O
-6	LHR	O
+6	LHR	B
 7	measurement	O
 8	significantly	O
 9	influences	O
@@ -1250,9 +1250,9 @@
 34	modulate	O
 35	splicing	O
 36	of	O
-37	P	B
-38	element	I
-39	IVS3	I
+37	P	O
+38	element	O
+39	IVS3	B
 40	in	O
 41	vitro	O
 42	.	O
@@ -1328,9 +1328,9 @@
 11	properties	O
 12	of	O
 13	left	O
-14	MCB	O
-15	-	O
-16	IV	O
+14	MCB	B
+15	-	I
+16	IV	I
 17	and	O
 18	-	O
 19	V	O
@@ -1416,8 +1416,8 @@
 40	and	O
 41	in	O
 42	a	O
-43	murine	B
-44	C	I
+43	murine	O
+44	C	O
 45	(	O
 46	2	O
 47	)	O
@@ -1843,7 +1843,7 @@
 28	:	O
 29	p32	O
 30	and	O
-31	p30	O
+31	p30	B
 32	.	O
 
 1	Retinoids	O
@@ -1907,7 +1907,7 @@
 
 1	Transfection	O
 2	of	O
-3	EGFP	B
+3	EGFP	O
 4	-	O
 5	tagged	O
 6	DENTT	O
@@ -2025,7 +2025,7 @@
 9	relationship	O
 10	between	O
 11	the	O
-12	DOX	B
+12	DOX	O
 13	binding	O
 14	ability	O
 15	(%	O
@@ -2067,8 +2067,8 @@
 11	region	O
 12	of	O
 13	the	O
-14	pea	B
-15	33RNP	I
+14	pea	O
+15	33RNP	B
 16	gene	I
 17	.	O
 
@@ -2572,7 +2572,7 @@
 5	with	O
 6	the	O
 7	EVH1	B
-8	domain	I
+8	domain	O
 9	of	O
 10	Mena	O
 11	,	O
@@ -2616,9 +2616,9 @@
 8	and	O
 9	deltaEF1	O
 10	(	O
-11	delta	O
-12	-	O
-13	crystallin	B
+11	delta	B
+12	-	I
+13	crystallin	I
 14	enhancer	I
 15	binding	I
 16	factor	I
@@ -2823,9 +2823,9 @@
 3	trial	O
 4	of	O
 5	the	O
-6	anti	O
-7	-	O
-8	G	O
+6	anti	B
+7	-	I
+8	G	I
 9	(	O
 10	D2	B
 11	)	O

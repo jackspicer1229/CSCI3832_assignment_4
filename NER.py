@@ -26,9 +26,9 @@ def features(sequence, i):
 	if re.search('\b[a-z]+[A-Z]+[a-z]*', word):
 		yield "Capital"
 
-	# #Contains hyphen
-	# if re.search('^-{1}$', word):
-	# 	yield "Hyphen"
+	if re.search('[.!?\\-]', word):
+		yield re.findall('[.!?\\-]', word)[0]
+
 
 
 
