@@ -4,6 +4,10 @@ from seqlearn.hmm import MultinomialHMM
 from seqlearn.perceptron import StructuredPerceptron
 from seqlearn.evaluation import bio_f_score
 
+from nltk.stem import PorterStemmer
+from nltk.tokenize import sent_tokenize, word_tokenize
+
+ps = PorterStemmer()
 
 
 
@@ -35,6 +39,8 @@ def features(sequence, i):
 			yield "word+2:{}" + sequence[i + 2][1].lower()
 
 	yield str(len(word))
+
+	# yield ps.stem(word)
 
 	# #Contains hyphen
 	# if re.search('^-{1}$', word):

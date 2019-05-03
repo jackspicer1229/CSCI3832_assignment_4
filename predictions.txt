@@ -136,11 +136,11 @@
 10	-	I
 11	MEK	I
 12	-	O
-13	extracellular	B
-14	signal	I
-15	-	I
-16	regulated	I
-17	kinase	I
+13	extracellular	O
+14	signal	O
+15	-	O
+16	regulated	O
+17	kinase	O
 18	(	O
 19	ERK	B
 20	)	O
@@ -600,8 +600,8 @@
 29	GnRH	B
 30	-	I
 31	R	I
-32	activating	I
-33	sequence	I
+32	activating	O
+33	sequence	O
 34	(	O
 35	GRAS	O
 36	),	O
@@ -1132,7 +1132,7 @@
 2	results	O
 3	show	O
 4	that	O
-5	CVN	O
+5	CVN	B
 6	specifically	O
 7	recognizes	O
 8	with	O
@@ -1907,7 +1907,7 @@
 
 1	Transfection	O
 2	of	O
-3	EGFP	B
+3	EGFP	O
 4	-	O
 5	tagged	O
 6	DENTT	O
@@ -2144,9 +2144,9 @@
 1	The	O
 2	deubiquitinating	O
 3	enzyme	O
-4	DUB	B
-5	-	I
-6	2	I
+4	DUB	O
+5	-	O
+6	2	O
 7	is	O
 8	induced	O
 9	in	O
@@ -2525,10 +2525,10 @@
 11	therapy	O
 12	.	O
 
-1	Anti	B
-2	-	I
-3	nucleolin	I
-4	mAb	I
+1	Anti	O
+2	-	O
+3	nucleolin	O
+4	mAb	O
 5	was	O
 6	used	O
 7	to	O
@@ -2565,7 +2565,7 @@
 21	test	O
 22	.	O
 
-1	Prrp	B
+1	Prrp	O
 2	can	O
 3	also	O
 4	associate	O
@@ -2600,7 +2600,7 @@
 15	.	O
 
 1	Acquired	O
-2	antithrombin	O
+2	antithrombin	B
 3	deficiency	O
 4	in	O
 5	sepsis	O
@@ -2896,7 +2896,7 @@
 13	application	O
 14	of	O
 15	the	O
-16	PSA	O
+16	PSA	B
 17	tape	O
 18	onto	O
 19	the	O
@@ -3119,10 +3119,10 @@
 12	.	O
 13	g	O
 14	.	O
-15	heme	O
-16	oxygenase	O
-17	-	O
-18	1	O
+15	heme	B
+16	oxygenase	I
+17	-	I
+18	1	I
 19	(	O
 20	HO	O
 21	-	O
